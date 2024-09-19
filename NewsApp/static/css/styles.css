@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: white; /* 背景色を少しグレーに変更して記事カードが際立つようにしました */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem;
+    color: #333;
+    background-color: #fff; /* ヘッダーに背景色を追加 */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* ヘッダーに影を追加 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+main {
+    margin-top: 100px; /* ヘッダーが他の要素にかぶらないようにマージンを増やしました */
+}
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.article {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px); /* 記事カードの最大幅を設定 */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0; /* ボーダーの色を少しグレーに変更 */
+    border-radius: 8px; /* 角の丸みを少し大きくしました */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* シャドウを少し強調 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* マウスオーバー時のアニメーションを追加 */
+}
+
+.article:hover {
+    transform: translateY(-5px); /* ホバー時に少し持ち上げるエフェクト */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* シャドウを強調 */
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* 画像の角の丸みも調整 */
+}
+
+.article h2 {
+    margin-top: 0;
+}
+
+.article a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.article a:hover {
+    color: #007BFF;
+}
